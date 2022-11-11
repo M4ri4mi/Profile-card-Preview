@@ -1,0 +1,130 @@
+:root {
+  --bg-clr: hsl(185, 75%, 39%);
+  --main-txt-clr: hsl(229, 23%, 23%);
+  --secondary-text-color: hsl(227, 10%, 46%);
+  --line-clr: hsla(228, 9%, 92%, 1);
+  --white-clr: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-clr);
+  background-image: url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -50rem left -40rem, bottom -70rem right -25rem;
+  font-family: "Kumbh Sans";
+  font-size: var(--font-size-normal);
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  display: block;
+}
+
+.container {
+  background-color: var(--white-clr);
+  border-radius: 1.5rem;
+  max-width: 32.6rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.8rem;
+}
+
+.victor {
+  position: absolute;
+  transform: translateY(-50%);
+  outline: 0.5rem solid var(--white-clr);
+  border-radius: 50%;
+}
+
+.user_info {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 5.8rem 0 1.3rem 0;
+}
+
+.name {
+  font-size: 1.8rem;
+  color: var(--main-txt-clr);
+}
+
+.age {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.london {
+  color: var(--secondary-text-color);
+  font-weight: 1.4rem;
+  font-weight: 400;
+}
+
+.line {
+  background-color: var(--line-clr);
+  height: 0.1rem;
+  width: 100%;
+  display: block;
+}
+.statistics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+
+  padding: 2.4rem 0;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.numb {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.txt {
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+  letter-spacing: 0.15rem;
+}
+
+@media only screen and (min-width: 90em) {
+  .container {
+    max-width: 35rem;
+  }
+}
